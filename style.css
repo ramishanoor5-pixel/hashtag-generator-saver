@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe, #f0fdfa);
+  color: #1e293b;
+  padding: 40px 20px;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #0f766e;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  color: #0f766e;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ccfbf1;
+}
+
+/* Generator */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #14b8a6;
+}
+
+#generateBtn, #saveBtn {
+  background: #0f766e;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+#generateBtn:hover, #saveBtn:hover {
+  background: #0d9488;
+  transform: translateY(-1px);
+}
+
+.hashtags-box {
+  min-height: 180px;
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.placeholder-text {
+  color: #94a3b8;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hashtag {
+  background: #ccfbf1;
+  color: #0f766e;
+  padding: 8px 14px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #99f6e4;
+  user-select: none;
+}
+
+.hashtag:hover {
+  background: #0f766e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.hashtag.copied {
+  background: #22c55e;
+  color: white;
+  border-color: #22c55e;
+}
+
+.hint {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* Saver */
+.save-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.save-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.save-form input:focus {
+  outline: none;
+  border-color: #14b8a6;
+}
+
+.saved-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.saved-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.saved-item:hover {
+  border-color: #99f6e4;
+  background: #f0fdfa;
+}
+
+.saved-item-name {
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.saved-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-load, .btn-delete {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-load {
+  background: #ccfbf1;
+  color: #0f766e;
+}
+
+.btn-load:hover {
+  background: #99f6e4;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+.empty-message {
+  text-align: center;
+  color: #94a3b8;
+  padding: 40px 0;
+}

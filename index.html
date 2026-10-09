@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hashtag Generator & Saver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Hashtag Generator & Saver</h1>
+      <p class="subtitle">Generate hashtags and save your favorite sets</p>
+    </header>
+
+    <main class="main-grid">
+      <!--  GENERATOR MODULE  -->
+      <section class="card generator">
+        <h2>Generator</h2>
+
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="topicInput" 
+            placeholder="Enter a topic (e.g. web development)" 
+            autocomplete="off"
+          />
+          <button id="generateBtn">Generate</button>
+        </div>
+
+        <div id="hashtagsContainer" class="hashtags-box">
+          <p class="placeholder-text">Your hashtags will appear here...</p>
+        </div>
+
+        <p class="hint">Click any hashtag to copy it</p>
+      </section>
+
+      <!--  SAVER MODULE  -->
+      <section class="card saver">
+        <h2>Saved Sets</h2>
+
+        <div class="save-form">
+          <input 
+            type="text" 
+            id="setNameInput" 
+            placeholder="Name this set (e.g. Web Dev)" 
+          />
+          <button id="saveBtn">Save Current</button>
+        </div>
+
+        <div id="savedSetsList" class="saved-list">
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
